@@ -1,89 +1,479 @@
 <!doctype html>
-<html lang="tr">
+
+<html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Fani — Kullanım Şartları / Terms of Use</title>
-<style>
-  :root { color-scheme: light dark; }
-  body { max-width: 720px; margin: 0 auto; padding: 28px 20px 80px; font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; line-height: 1.65; color: #172033; background: #f4f6fb; }
-  @media (prefers-color-scheme: dark) { body { color: #e6e6e6; background: #121212; } a { color: #7db3ff; } }
-  h1 { font-size: 1.6rem; margin-bottom: 0; }
-  h2 { font-size: 1.1rem; margin-top: 1.9rem; }
-  .sub { color: #647084; margin-top: 4px; }
-  .lang { display: inline-block; margin: 16px 8px 0 0; padding: 6px 14px; border: 1px solid #8886; border-radius: 6px; text-decoration: none; }
-  hr { border: none; border-top: 1px solid #8884; margin: 44px 0; }
-</style>
+  <meta charset="utf-8">
+  <title>Ucurtma Legal Pages</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy policies, terms of use and support pages for Ucurtma apps and games.">
+
+  <style>
+    :root {
+      --bg: #f4f6fb;
+      --card: #ffffff;
+      --text: #172033;
+      --muted: #647084;
+      --line: #e3e8f3;
+      --accent: #4f46e5;
+      --accent-soft: #eef2ff;
+      --green: #0f766e;
+      --green-soft: #ecfdf5;
+      --shadow: rgba(23, 32, 51, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(circle at 0% 0%, rgba(79, 70, 229, 0.12), transparent 32%),
+        radial-gradient(circle at 100% 0%, rgba(15, 118, 110, 0.10), transparent 30%),
+        linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    main {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 42px 20px 70px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 900;
+      color: var(--text);
+    }
+
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--accent), #7c3aed);
+      box-shadow: 0 12px 26px rgba(79, 70, 229, 0.22);
+    }
+
+    .top-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: flex-end;
+    }
+
+    .top-links a {
+      padding: 9px 13px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      background: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .top-links a:hover {
+      color: var(--accent);
+      border-color: rgba(79, 70, 229, 0.28);
+      background: var(--accent-soft);
+    }
+
+    .hero {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 34px;
+      box-shadow: 0 18px 50px var(--shadow);
+      margin-bottom: 22px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.35px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(34px, 5vw, 54px);
+      line-height: 1;
+      letter-spacing: -1.6px;
+    }
+
+    .hero p {
+      margin: 0;
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .notice {
+      margin: 18px 0 26px;
+      padding: 18px 20px;
+      border-radius: 20px;
+      background: var(--green-soft);
+      border: 1px solid #bbf7d0;
+      color: #14532d;
+      box-shadow: 0 10px 30px rgba(15, 118, 110, 0.06);
+    }
+
+    .notice strong {
+      color: var(--green);
+    }
+
+    .apps {
+      display: grid;
+      gap: 18px;
+    }
+
+    .app-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: 0 14px 38px var(--shadow);
+    }
+
+    .app-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 16px;
+      margin-bottom: 16px;
+    }
+
+    .app-title {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+    }
+
+    .app-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      color: #fff;
+      background: linear-gradient(135deg, #f59e0b, #ec4899);
+    }
+
+    .app-icon.blue {
+      background: linear-gradient(135deg, #06b6d4, #6366f1);
+    }
+
+    .app-icon.fani {
+      background: linear-gradient(135deg, #0c0a08, #e8a03c);
+    }
+
+    .app-title h2 {
+      margin: 0;
+      font-size: 23px;
+      letter-spacing: -0.4px;
+    }
+
+    .app-title small {
+      color: var(--muted);
+    }
+
+    .tag {
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .legal-links {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .legal-link {
+      display: block;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: #fbfcff;
+      transition: 0.2s ease;
+    }
+
+    .legal-link:hover {
+      border-color: rgba(79, 70, 229, 0.32);
+      background: var(--accent-soft);
+      transform: translateY(-2px);
+    }
+
+    .legal-link strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--text);
+    }
+
+    .legal-link span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .utility-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .utility {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: 0 14px 38px var(--shadow);
+    }
+
+    .utility h2 {
+      margin: 0 0 8px;
+      font-size: 22px;
+    }
+
+    .utility p {
+      margin: 0 0 16px;
+      color: var(--muted);
+    }
+
+    .button-link {
+      display: inline-flex;
+      padding: 11px 14px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 900;
+      transition: 0.2s ease;
+    }
+
+    .button-link:hover {
+      background: #3730a3;
+      transform: translateY(-1px);
+    }
+
+    .footer {
+      margin-top: 28px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer a {
+      color: var(--accent);
+      font-weight: 900;
+    }
+
+    @media (max-width: 760px) {
+      main {
+        padding: 26px 15px 54px;
+      }
+
+      .topbar,
+      .app-header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .top-links {
+        justify-content: flex-start;
+      }
+
+      .hero {
+        padding: 26px;
+      }
+
+      .legal-links,
+      .utility-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
 </head>
+
 <body>
+  <main>
+    <header class="topbar">
+      <a class="brand" href="../">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Ucurtma Legal Pages</span>
+      </a>
 
-<a class="lang" href="#tr">Türkçe</a><a class="lang" href="#en">English</a>
+  <nav class="top-links" aria-label="Quick links">
+    <a href="../">Developer Website</a>
+    <a href="../app-ads.txt">app-ads.txt</a>
+    <a href="mailto:medyaucurtma@gmail.com">Contact</a>
+  </nav>
+</header>
 
-<section id="tr">
-<h1>Fani — Kullanım Şartları</h1>
-<p class="sub">Son güncelleme: 20 Temmuz 2026 · Uçurtma Medya</p>
-
-<p><strong>Fani</strong> ("Oyun") uygulamasını indirerek ve kullanarak bu şartları kabul etmiş olursun.</p>
-
-<h2>1. Oyunun doğası</h2>
-<p>Fani, kalıcı ölümlü bir oyundur: karakterin ölürse geri gelmez. Bu, oyunun bilinçli bir
-tasarım kuralıdır, bir hata değildir.</p>
-
-<h2>2. Kullanıcı içeriği</h2>
-<p>Ölümden sonra taşına yazdığın "hayalet notu" herkese açık mezarlıkta gösterilir. Uygunsuz,
-yasa dışı, nefret içeren, taciz edici veya kişisel bilgi içeren içerik yazmak yasaktır. Böyle
-içerikler otomatik süzgeç ve kullanıcı şikâyetleriyle kaldırılabilir; tekrarlayan ihlallerde
-erişimin kısıtlanabilir. Uygunsuz içeriğe tolerans yoktur.</p>
-
-<h2>3. Satın almalar</h2>
-<p>Oyun ücretsiz indirilir. İsteğe bağlı, tek seferlik bir uygulama-içi satın alma (kilit açma)
-sunulur. Satın almalar Apple App Store üzerinden yürür ve Apple'ın koşullarına tabidir. İadeler
-mağaza politikalarına göre işlenir.</p>
-
-<h2>4. Sorumluluk reddi</h2>
-<p>Oyun "olduğu gibi" sunulur. Kesintisiz veya hatasız çalışacağı garanti edilmez. Yürürlükteki
-yasaların izin verdiği ölçüde, oyunun kullanımından doğan dolaylı zararlardan sorumlu değiliz.</p>
-
-<h2>5. Değişiklikler</h2>
-<p>Bu şartlar güncellenebilir; önemli değişikliklerde bu sayfadaki tarih güncellenir.</p>
-
-<p><strong>İletişim:</strong> <a href="mailto:medyaucurtma@gmail.com">medyaucurtma@gmail.com</a> ·
-<a href="privacy-policy.html">Gizlilik Politikası</a></p>
+<section class="hero">
+  <span class="eyebrow">Legal Directory</span>
+  <h1>Privacy, Terms & Support</h1>
+  <p>
+    This directory contains official privacy policies, terms of use and support pages for Ucurtma apps and games.
+    Use the links below for store listings, support requests and advertising transparency checks.
+  </p>
 </section>
 
-<hr />
-
-<section id="en">
-<h1>Fani — Terms of Use</h1>
-<p class="sub">Last updated: 20 July 2026 · Uçurtma Medya</p>
-
-<p>By downloading and using <strong>Fani</strong> (the "Game") you agree to these terms.</p>
-
-<h2>1. Nature of the game</h2>
-<p>Fani is a permadeath game: if your character dies, they do not come back. This is a deliberate
-design rule, not a bug.</p>
-
-<h2>2. User content</h2>
-<p>The "ghost note" you write on your stone after death is shown publicly in the shared graveyard.
-Writing objectionable, illegal, hateful, harassing, or personally identifying content is prohibited.
-Such content may be removed via automated filtering and user reports; repeated violations may result
-in restricted access. There is no tolerance for objectionable content.</p>
-
-<h2>3. Purchases</h2>
-<p>The Game is free to download. An optional, one-time in-app purchase (an unlock) is offered.
-Purchases are processed through the Apple App Store and subject to Apple's terms. Refunds are handled
-per store policies.</p>
-
-<h2>4. Disclaimer</h2>
-<p>The Game is provided "as is". We do not guarantee it will be uninterrupted or error-free. To the
-extent permitted by applicable law, we are not liable for indirect damages arising from use of the Game.</p>
-
-<h2>5. Changes</h2>
-<p>These terms may be updated; the date on this page will change for significant updates.</p>
-
-<p><strong>Contact:</strong> <a href="mailto:medyaucurtma@gmail.com">medyaucurtma@gmail.com</a> ·
-<a href="privacy-policy.html">Privacy Policy</a></p>
+<section class="notice">
+  <strong>Advertising transparency:</strong>
+  Ucurtma publishes app-ads.txt at the developer website root:
+  <a href="../app-ads.txt">https://emreyilmaz1912.github.io/app-ads.txt</a>
 </section>
 
+<section class="apps">
+  <article class="app-card">
+    <div class="app-header">
+      <div class="app-title">
+        <div class="app-icon fani" aria-hidden="true">F</div>
+        <div>
+          <h2>Fani</h2>
+          <small>Permadeath roguelike — one character, one life</small>
+        </div>
+      </div>
+      <span class="tag">Active</span>
+    </div>
+
+    <div class="legal-links">
+      <a class="legal-link" href="./fani/privacy-policy.html">
+        <strong>Privacy Policy</strong>
+        <span>Data, graveyard and privacy details</span>
+      </a>
+
+      <a class="legal-link" href="./fani/terms.html">
+        <strong>Terms of Use</strong>
+        <span>Game usage terms and disclaimers</span>
+      </a>
+
+      <a class="legal-link" href="./fani/support.html">
+        <strong>Support</strong>
+        <span>Help, contact and common questions</span>
+      </a>
+    </div>
+  </article>
+
+  <article class="app-card">
+    <div class="app-header">
+      <div class="app-title">
+        <div class="app-icon" aria-hidden="true">G</div>
+        <div>
+          <h2>Grix Says Nope</h2>
+          <small>Hyper casual rule-changing game</small>
+        </div>
+      </div>
+      <span class="tag">Active</span>
+    </div>
+
+    <div class="legal-links">
+      <a class="legal-link" href="./grix-says-nope/privacy-policy.html">
+        <strong>Privacy Policy</strong>
+        <span>Advertising, analytics and privacy details</span>
+      </a>
+
+      <a class="legal-link" href="./grix-says-nope/terms.html">
+        <strong>Terms of Use</strong>
+        <span>Game usage terms and disclaimers</span>
+      </a>
+
+      <a class="legal-link" href="./grix-says-nope/support.html">
+        <strong>Support</strong>
+        <span>Help, contact and common questions</span>
+      </a>
+    </div>
+  </article>
+
+  <article class="app-card">
+    <div class="app-header">
+      <div class="app-title">
+        <div class="app-icon blue" aria-hidden="true">L</div>
+        <div>
+          <h2>LingoBlocks</h2>
+          <small>Word puzzle game</small>
+        </div>
+      </div>
+      <span class="tag">Active</span>
+    </div>
+
+    <div class="legal-links">
+      <a class="legal-link" href="./lingoblocks/privacy-policy.html">
+        <strong>Privacy Policy</strong>
+        <span>Data and privacy details</span>
+      </a>
+
+      <a class="legal-link" href="./lingoblocks/terms-of-use.html">
+        <strong>Terms of Use</strong>
+        <span>Usage terms and disclaimers</span>
+      </a>
+
+      <a class="legal-link" href="./lingoblocks/support.html">
+        <strong>Support</strong>
+        <span>Help and contact information</span>
+      </a>
+    </div>
+  </article>
+</section>
+
+<section class="utility-grid">
+  <article class="utility">
+    <h2>Developer Website</h2>
+    <p>
+      Visit the main developer website for Ucurtma apps and games.
+    </p>
+    <a class="button-link" href="../">
+      Open Developer Website
+    </a>
+  </article>
+
+  <article class="utility">
+    <h2>Contact</h2>
+    <p>
+      For privacy, legal or support questions, contact us by email.
+    </p>
+    <a class="button-link" href="mailto:medyaucurtma@gmail.com">
+      medyaucurtma@gmail.com
+    </a>
+  </article>
+</section>
+
+<footer class="footer">
+  © 2026 Ucurtma. All rights reserved.
+</footer>
+
+  </main>
 </body>
 </html>
